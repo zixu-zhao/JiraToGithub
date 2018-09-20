@@ -13,7 +13,7 @@
         var vm = this;
 
         chrome.tabs.query({currentWindow: true, active: true}, function (tabs) {
-
+            vm.pageValid = true;
             vm.ticketLink = tabs[0].url;
 
             const urlRegExp = /https:\/\/jira\.miohq\.com\/browse\/\D+-\d+/;
@@ -29,8 +29,6 @@
 
                 vm.branchInfo = key + '-' + branchName;
                 vm.commitInfo = key + ' ' + header;
-
-                vm.pageValid = true;
             } else {
                 vm.pageValid = false;
             }

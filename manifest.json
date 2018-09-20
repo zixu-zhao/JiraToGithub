@@ -1,7 +1,7 @@
 {
   "name": "JiraToGithub",
-  "version": "0.0.2",
-  "version_name": "0.0.2 beta",
+  "version": "0.0.3",
+  "version_name": "0.0.3 beta",
   "manifest_version": 2,
   "description": "Convert Jira ticket title to fit Github",
   "icons": {
