@@ -1,0 +1,23 @@
+<div ng-controller="ctrl as vm" class="main-page">
+    <md-content layout-gt-sm="row" layout-padding ng-if="vm.pageValid">
+        <md-input-container class="md-block">
+            <label>Branch Info</label>
+            <input id="branch-info-content" ng-model="vm.branchInfo">
+            <md-icon class="material-icons" ng-click="vm.copyAsBranchInfo()">file_copy</md-icon>
+        </md-input-container>
+
+        <md-input-container class="md-block">
+            <label>Commit Info</label>
+            <input id="commit-info-content" ng-model="vm.commitInfo">
+            <md-icon class="material-icons" ng-click="vm.copyAsCommitInfo()">file_copy</md-icon>
+        </md-input-container>
+
+        <md-input-container class="md-block">
+            <label>Ticket Link</label>
+            <input id="ticket-link" ng-model="vm.ticketLink">
+            <md-icon class="material-icons" ng-click="vm.copyTicketLink()">file_copy</md-icon>
+        </md-input-container>
+    </md-content>
+
+    <h1 id="unavailable-msg" ng-if="!vm.pageValid">Only Available for Ticket Tabs</h1>
+</div>

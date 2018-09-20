@@ -1,0 +1,31 @@
+body {
+     font-family: Verdana, Helvetica, sans-serif;
+ }
+
+.main-page {
+    min-width: 500px;
+}
+
+md-content {
+    width: 90%;
+    font-size: 14px;
+    margin: auto;
+}
+
+.material-icons {
+    outline: none;
+    cursor: pointer;
+    display: inline-block;
+}
+
+#unavailable-msg {
+    position: absolute;
+    left: 10%;
+    top: 25%;
+}
+
+.footer {
+    position: absolute;
+    right: 5%;
+    bottom: 0;
+}
