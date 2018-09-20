@@ -10,19 +10,20 @@
     ])
 
     .controller("ctrl", function () {
-        var vm = this;
+        const vm = this;
+        vm.pageValid = true;
 
         chrome.tabs.query({currentWindow: true, active: true}, function (tabs) {
-            vm.pageValid = true;
+
             vm.ticketLink = tabs[0].url;
 
             const urlRegExp = /https:\/\/jira\.miohq\.com\/browse\/\D+-\d+/;
-
-            if (vm.ticketLink.match(urlRegExp)) {
+            if (vm.ticketLink.match(urlRegExp) !== null) {
                 const title = tabs[0].title;
 
                 const titleRegExp = /\[([^)]+)]/;
                 const key = titleRegExp.exec(title)[1];
+
                 const header = title.replace(titleRegExp.exec(title)[0], '').replace('- Miovision Jira', '').trim();
 
                 const branchName = header.replace(/(\s|-)+/g, '-').replace(/[^0-9A-Z\-]+/gi, "").toLowerCase();
