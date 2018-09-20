@@ -14,11 +14,6 @@
     "default_popup": "popup.html",
     "default_title": "JiraToGithub"
   },
-  "background": {
-    "scripts": [
-      "js/app/background.js"
-    ]
-  },
   "minimum_chrome_version": "18",
   "permissions": [
     "tabs",

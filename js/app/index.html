@@ -1,13 +1,13 @@
 <div ng-controller="ctrl as vm" class="main-page">
     <md-content layout-gt-sm="row" layout-padding ng-if="vm.pageValid">
         <md-input-container class="md-block">
-            <label>Branch Info</label>
+            <label>Branch Title</label>
             <input id="branch-info-content" ng-model="vm.branchInfo">
             <md-icon class="material-icons" ng-click="vm.copyAsBranchInfo()">file_copy</md-icon>
         </md-input-container>
 
         <md-input-container class="md-block">
-            <label>Commit Info</label>
+            <label>Commit Title</label>
             <input id="commit-info-content" ng-model="vm.commitInfo">
             <md-icon class="material-icons" ng-click="vm.copyAsCommitInfo()">file_copy</md-icon>
         </md-input-container>
