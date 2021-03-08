@@ -17,14 +17,14 @@
 
             vm.ticketLink = tabs[0].url;
 
-            const urlRegExp = /https:\/\/jira\.miohq\.com\/browse\/\D+-\d+/;
+            const urlRegExp = /https:\/\/.*\.atlassian\.net\/browse\/\D+-\d+/;
             if (vm.ticketLink.match(urlRegExp) !== null) {
                 const title = tabs[0].title;
 
                 const titleRegExp = /\[([^)]+)]/;
                 const key = titleRegExp.exec(title)[1];
 
-                const header = title.replace(titleRegExp.exec(title)[0], '').replace('- Miovision Jira', '').trim();
+                const header = title.replace(titleRegExp.exec(title)[0], '').replace('- JIRA', '').trim();
 
                 const branchName = header.replace(/(\s|-)+/g, '-').replace(/[^0-9A-Z\-]+/gi, "").toLowerCase();
 
